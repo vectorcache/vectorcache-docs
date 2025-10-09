@@ -4,7 +4,7 @@ site_description: AI-powered semantic caching for LLM applications - reduce cost
 site_author: Vectorcache Team
 
 repo_name: vectorcache/vectorcache-docs
-repo_url: https://github.com/YOUR_USERNAME/vectorcache-docs
+repo_url: https://github.com/rizmonto/vectorcache-docs
 edit_uri: edit/main/docs/
 
 theme:

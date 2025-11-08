@@ -106,7 +106,7 @@ Always use HTTPS:
 ```typescript
 const client = new VectorcacheClient({
   apiKey: process.env.VECTORCACHE_API_KEY!,
-  baseUrl: 'https://api.vectorcache.com' // Always HTTPS
+  baseUrl: 'https://api.vectorcache.ai' // Always HTTPS
 });
 ```
 

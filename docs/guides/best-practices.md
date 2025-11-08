@@ -320,7 +320,7 @@ function checkAndAlert(metrics: CacheMetrics) {
 Test your Vectorcache integration:
 
 ```typescript
-import { VectorcacheClient } from 'vectorcache-js';
+import { VectorcacheClient } from 'vectorcache';
 
 describe('Vectorcache Integration', () => {
   const client = new VectorcacheClient({

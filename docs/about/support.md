@@ -24,7 +24,7 @@ Get help with Vectorcache.
 
 ### 📚 Documentation
 
-**[docs.vectorcache.com](https://docs.vectorcache.com)**
+**[docs.vectorcache.ai](https://docs.vectorcache.ai)**
 
 - Complete API reference
 - Step-by-step guides

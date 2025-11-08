@@ -5,7 +5,7 @@ Vectorcache provides a RESTful API for semantic caching of LLM responses.
 ## Base URL
 
 ```
-https://api.vectorcache.com
+https://api.vectorcache.ai
 ```
 
 ## Authentication
@@ -81,7 +81,7 @@ See [Error Handling](errors.md) for complete error codes and handling.
 ## Quick Example
 
 ```bash
-curl -X POST "https://api.vectorcache.com/v1/cache/query" \
+curl -X POST "https://api.vectorcache.ai/v1/cache/query" \
   -H "Authorization: Bearer YOUR_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{

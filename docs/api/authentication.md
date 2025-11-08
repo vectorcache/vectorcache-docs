@@ -41,7 +41,7 @@ Authorization: Bearer vc_1234567890abcdef1234567890abcdef
 === "cURL"
 
     ```bash
-    curl -X POST "https://api.vectorcache.com/v1/cache/query" \
+    curl -X POST "https://api.vectorcache.ai/v1/cache/query" \
       -H "Authorization: Bearer vc_1234567890abcdef1234567890abcdef" \
       -H "Content-Type: application/json" \
       -d '{
@@ -53,7 +53,7 @@ Authorization: Bearer vc_1234567890abcdef1234567890abcdef
 === "JavaScript"
 
     ```javascript
-    const response = await fetch('https://api.vectorcache.com/v1/cache/query', {
+    const response = await fetch('https://api.vectorcache.ai/v1/cache/query', {
       method: 'POST',
       headers: {
         'Authorization': 'Bearer vc_1234567890abcdef1234567890abcdef',
@@ -77,7 +77,7 @@ Authorization: Bearer vc_1234567890abcdef1234567890abcdef
     }
 
     response = requests.post(
-        'https://api.vectorcache.com/v1/cache/query',
+        'https://api.vectorcache.ai/v1/cache/query',
         json={'prompt': 'What is AI?', 'model': 'gpt-4o'},
         headers=headers
     )

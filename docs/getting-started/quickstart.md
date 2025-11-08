@@ -41,7 +41,7 @@ Before caching can work, Vectorcache needs your LLM provider API keys:
 === "JavaScript/TypeScript"
 
     ```bash
-    npm install vectorcache-js
+    npm install vectorcache
     ```
 
 === "Python"
@@ -55,11 +55,11 @@ Before caching can work, Vectorcache needs your LLM provider API keys:
 === "JavaScript/TypeScript"
 
     ```typescript
-    import { VectorcacheClient } from 'vectorcache-js';
+    import { VectorcacheClient } from 'vectorcache';
 
     const client = new VectorcacheClient({
       apiKey: 'your_api_key_here',
-      baseUrl: 'https://api.vectorcache.com'
+      baseUrl: 'https://api.vectorcache.ai'
     });
 
     async function main() {
@@ -87,7 +87,7 @@ Before caching can work, Vectorcache needs your LLM provider API keys:
     import requests
 
     api_key = "your_api_key_here"
-    base_url = "https://api.vectorcache.com"
+    base_url = "https://api.vectorcache.ai"
 
     headers = {
         "Authorization": f"Bearer {api_key}",

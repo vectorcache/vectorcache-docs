@@ -7,11 +7,11 @@ Configure the Vectorcache SDK for your application.
 ### Basic Setup
 
 ```typescript
-import { VectorcacheClient } from 'vectorcache-js';
+import { VectorcacheClient } from 'vectorcache';
 
 const client = new VectorcacheClient({
   apiKey: 'your_api_key_here',
-  baseUrl: 'https://api.vectorcache.com' // optional, defaults to production
+  baseUrl: 'https://api.vectorcache.ai' // optional, defaults to production
 });
 ```
 
@@ -20,7 +20,7 @@ const client = new VectorcacheClient({
 | Option | Type | Required | Default | Description |
 |--------|------|----------|---------|-------------|
 | `apiKey` | string | Yes | - | Your Vectorcache API key |
-| `baseUrl` | string | No | `https://api.vectorcache.com` | API base URL |
+| `baseUrl` | string | No | `https://api.vectorcache.ai` | API base URL |
 | `timeout` | number | No | `30000` | Request timeout in milliseconds |
 
 ### Environment Variables
@@ -47,7 +47,7 @@ import {
   VectorcacheClient,
   CacheQueryRequest,
   CacheQueryResponse
-} from 'vectorcache-js';
+} from 'vectorcache';
 
 const request: CacheQueryRequest = {
   prompt: 'What is AI?',
@@ -67,7 +67,7 @@ import requests
 import os
 
 api_key = os.environ.get('VECTORCACHE_API_KEY')
-base_url = 'https://api.vectorcache.com'
+base_url = 'https://api.vectorcache.ai'
 
 headers = {
     'Authorization': f'Bearer {api_key}',

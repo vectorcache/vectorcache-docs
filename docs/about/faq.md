@@ -213,7 +213,7 @@ Data export via API or dashboard coming soon.
 
 - 📧 Email: support@vectorcache.com
 - 💬 Discord: [Join our community](https://discord.gg/vectorcache)
-- 📚 Docs: [docs.vectorcache.com](https://docs.vectorcache.com)
+- 📚 Docs: [docs.vectorcache.ai](https://docs.vectorcache.ai)
 - 🐛 Issues: [GitHub](https://github.com/YOUR_USERNAME/vectorcache-docs/issues)
 
 ### What's your SLA?

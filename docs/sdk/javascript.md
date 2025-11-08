@@ -5,16 +5,17 @@ Complete guide to the Vectorcache JavaScript/TypeScript SDK.
 ## Installation
 
 ```bash
-npm install vectorcache-js
+npm install vectorcache
 ```
 
 ## Quick Start
 
 ```typescript
-import { VectorcacheClient } from 'vectorcache-js';
+import { VectorcacheClient } from 'vectorcache';
 
 const client = new VectorcacheClient({
   apiKey: process.env.VECTORCACHE_API_KEY!,
+  projectId: process.env.VECTORCACHE_PROJECT_ID!,
 });
 
 const result = await client.query({
@@ -41,7 +42,8 @@ new VectorcacheClient(config: VectorcacheConfig)
 | Name | Type | Required | Default | Description |
 |------|------|----------|---------|-------------|
 | `config.apiKey` | string | Yes | - | Your Vectorcache API key |
-| `config.baseUrl` | string | No | `https://api.vectorcache.com` | API base URL |
+| `config.projectId` | string | Yes | - | Your Vectorcache project ID |
+| `config.baseUrl` | string | No | `https://api.vectorcache.ai` | API base URL |
 | `config.timeout` | number | No | `30000` | Request timeout (ms) |
 
 #### Methods
@@ -111,7 +113,7 @@ import type {
   CacheQueryRequest,
   CacheQueryResponse,
   VectorcacheError
-} from 'vectorcache-js';
+} from 'vectorcache';
 ```
 
 ### Type-Safe Queries
@@ -142,7 +144,7 @@ class VectorcacheError extends Error {
 ### Handling Errors
 
 ```typescript
-import { VectorcacheError } from 'vectorcache-js';
+import { VectorcacheError } from 'vectorcache';
 
 try {
   const result = await client.query({
@@ -232,7 +234,7 @@ const productionClient = new VectorcacheClient({
 
 const stagingClient = new VectorcacheClient({
   apiKey: process.env.STAGING_VECTORCACHE_KEY!,
-  baseUrl: 'https://staging-api.vectorcache.com'
+  baseUrl: 'https://staging-api.vectorcache.ai'
 });
 ```
 
@@ -256,7 +258,7 @@ for await (const chunk of stream) {
 
 ```typescript
 // app/api/chat/route.ts
-import { VectorcacheClient } from 'vectorcache-js';
+import { VectorcacheClient } from 'vectorcache';
 import { NextRequest, NextResponse } from 'next/server';
 
 const client = new VectorcacheClient({
@@ -280,7 +282,7 @@ export async function POST(request: NextRequest) {
 
 ```typescript
 import express from 'express';
-import { VectorcacheClient } from 'vectorcache-js';
+import { VectorcacheClient } from 'vectorcache';
 
 const app = express();
 const client = new VectorcacheClient({
@@ -304,7 +306,7 @@ app.post('/api/query', async (req, res) => {
 
 ```typescript
 import { useState } from 'react';
-import { VectorcacheClient } from 'vectorcache-js';
+import { VectorcacheClient } from 'vectorcache';
 
 const client = new VectorcacheClient({
   apiKey: process.env.NEXT_PUBLIC_VECTORCACHE_KEY!,
@@ -337,7 +339,7 @@ export function useVectorcache() {
 ### Chatbot with Cache Metrics
 
 ```typescript
-import { VectorcacheClient } from 'vectorcache-js';
+import { VectorcacheClient } from 'vectorcache';
 
 const client = new VectorcacheClient({
   apiKey: process.env.VECTORCACHE_API_KEY!,

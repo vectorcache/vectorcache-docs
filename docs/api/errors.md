@@ -231,7 +231,7 @@ async function queryWithRetry(client, request, maxRetries = 3) {
 ### JavaScript/TypeScript
 
 ```typescript
-import { VectorcacheClient, VectorcacheError } from 'vectorcache-js';
+import { VectorcacheClient, VectorcacheError } from 'vectorcache';
 
 const client = new VectorcacheClient({ apiKey: 'YOUR_API_KEY' });
 
@@ -278,7 +278,7 @@ import requests
 from requests.exceptions import HTTPError, Timeout, RequestException
 
 def query_with_error_handling(prompt: str, model: str, api_key: str):
-    url = 'https://api.vectorcache.com/v1/cache/query'
+    url = 'https://api.vectorcache.ai/v1/cache/query'
 
     headers = {
         'Authorization': f'Bearer {api_key}',

@@ -20,7 +20,7 @@ import requests
 import os
 
 api_key = os.environ.get('VECTORCACHE_API_KEY')
-base_url = 'https://api.vectorcache.com'
+base_url = 'https://api.vectorcache.ai'
 
 headers = {
     'Authorization': f'Bearer {api_key}',
@@ -61,7 +61,7 @@ def query_vectorcache(
 ) -> Dict[str, Any]:
     """Query the Vectorcache API."""
 
-    url = 'https://api.vectorcache.com/v1/cache/query'
+    url = 'https://api.vectorcache.ai/v1/cache/query'
 
     headers = {
         'Authorization': f'Bearer {api_key}',
@@ -98,7 +98,7 @@ print(result)
 import requests
 
 def query_with_error_handling(prompt: str, model: str, api_key: str):
-    url = 'https://api.vectorcache.com/v1/cache/query'
+    url = 'https://api.vectorcache.ai/v1/cache/query'
 
     headers = {
         'Authorization': f'Bearer {api_key}',
@@ -150,7 +150,7 @@ async def query_vectorcache_async(
 ) -> Dict[str, Any]:
     """Async query to Vectorcache API."""
 
-    url = 'https://api.vectorcache.com/v1/cache/query'
+    url = 'https://api.vectorcache.ai/v1/cache/query'
 
     headers = {
         'Authorization': f'Bearer {api_key}',
@@ -207,7 +207,7 @@ async def query_with_client(
     model: str,
     api_key: str
 ) -> Dict[str, Any]:
-    url = 'https://api.vectorcache.com/v1/cache/query'
+    url = 'https://api.vectorcache.ai/v1/cache/query'
 
     headers = {
         'Authorization': f'Bearer {api_key}',
@@ -262,7 +262,7 @@ class VectorcacheResponse:
     llm_provider: str
 
 class VectorcacheClient:
-    def __init__(self, api_key: str, base_url: str = 'https://api.vectorcache.com'):
+    def __init__(self, api_key: str, base_url: str = 'https://api.vectorcache.ai'):
         self.api_key = api_key
         self.base_url = base_url
         self.session = requests.Session()

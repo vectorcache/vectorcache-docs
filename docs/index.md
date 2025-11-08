@@ -20,11 +20,11 @@ Vectorcache is an AI-powered caching solution that uses semantic similarity to c
 === "JavaScript/TypeScript"
 
     ```typescript
-    import { VectorcacheClient } from 'vectorcache-js';
+    import { VectorcacheClient } from 'vectorcache';
 
     const client = new VectorcacheClient({
       apiKey: 'your_api_key',
-      baseUrl: 'https://api.vectorcache.com'
+      baseUrl: 'https://api.vectorcache.ai'
     });
 
     const result = await client.query({
@@ -54,7 +54,7 @@ Vectorcache is an AI-powered caching solution that uses semantic similarity to c
     }
 
     response = requests.post(
-        "https://api.vectorcache.com/v1/cache/query",
+        "https://api.vectorcache.ai/v1/cache/query",
         json=data,
         headers=headers
     )
@@ -66,7 +66,7 @@ Vectorcache is an AI-powered caching solution that uses semantic similarity to c
 === "cURL"
 
     ```bash
-    curl -X POST "https://api.vectorcache.com/v1/cache/query" \
+    curl -X POST "https://api.vectorcache.ai/v1/cache/query" \
       -H "Authorization: Bearer YOUR_API_KEY" \
       -H "Content-Type: application/json" \
       -d '{

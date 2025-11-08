@@ -7,19 +7,19 @@ Install the Vectorcache SDK for your preferred language.
 ### NPM
 
 ```bash
-npm install vectorcache-js
+npm install vectorcache
 ```
 
 ### Yarn
 
 ```bash
-yarn add vectorcache-js
+yarn add vectorcache
 ```
 
 ### pnpm
 
 ```bash
-pnpm add vectorcache-js
+pnpm add vectorcache
 ```
 
 ### Requirements
@@ -54,7 +54,7 @@ You can also use Vectorcache without an SDK by making direct HTTP requests to ou
 No installation needed - just use cURL:
 
 ```bash
-curl -X POST "https://api.vectorcache.com/v1/cache/query" \
+curl -X POST "https://api.vectorcache.ai/v1/cache/query" \
   -H "Authorization: Bearer YOUR_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
@@ -74,7 +74,7 @@ Any HTTP client library works:
     const axios = require('axios');
 
     const response = await axios.post(
-      'https://api.vectorcache.com/v1/cache/query',
+      'https://api.vectorcache.ai/v1/cache/query',
       {
         prompt: 'Your prompt here',
         model: 'gpt-4o',
@@ -96,7 +96,7 @@ Any HTTP client library works:
 
     async with httpx.AsyncClient() as client:
         response = await client.post(
-            'https://api.vectorcache.com/v1/cache/query',
+            'https://api.vectorcache.ai/v1/cache/query',
             json={
                 'prompt': 'Your prompt here',
                 'model': 'gpt-4o',
@@ -115,7 +115,7 @@ Any HTTP client library works:
 === "JavaScript/TypeScript"
 
     ```javascript
-    const { VectorcacheClient } = require('vectorcache-js');
+    const { VectorcacheClient } = require('vectorcache');
     console.log('Vectorcache SDK installed successfully!');
     ```
 

@@ -5,7 +5,7 @@ Use Vectorcache directly with cURL - no SDK required.
 ## Basic Query
 
 ```bash
-curl -X POST "https://api.vectorcache.com/v1/cache/query" \
+curl -X POST "https://api.vectorcache.ai/v1/cache/query" \
   -H "Authorization: Bearer YOUR_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
@@ -18,7 +18,7 @@ curl -X POST "https://api.vectorcache.com/v1/cache/query" \
 ## With Context
 
 ```bash
-curl -X POST "https://api.vectorcache.com/v1/cache/query" \
+curl -X POST "https://api.vectorcache.ai/v1/cache/query" \
   -H "Authorization: Bearer YOUR_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
@@ -32,7 +32,7 @@ curl -X POST "https://api.vectorcache.com/v1/cache/query" \
 ## With Debug Information
 
 ```bash
-curl -X POST "https://api.vectorcache.com/v1/cache/query" \
+curl -X POST "https://api.vectorcache.ai/v1/cache/query" \
   -H "Authorization: Bearer YOUR_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
@@ -50,7 +50,7 @@ Store your API key in an environment variable:
 ```bash
 export VECTORCACHE_API_KEY="your_api_key_here"
 
-curl -X POST "https://api.vectorcache.com/v1/cache/query" \
+curl -X POST "https://api.vectorcache.ai/v1/cache/query" \
   -H "Authorization: Bearer $VECTORCACHE_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
@@ -64,7 +64,7 @@ curl -X POST "https://api.vectorcache.com/v1/cache/query" \
 Use `jq` to format the response:
 
 ```bash
-curl -X POST "https://api.vectorcache.com/v1/cache/query" \
+curl -X POST "https://api.vectorcache.ai/v1/cache/query" \
   -H "Authorization: Bearer $VECTORCACHE_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
@@ -76,7 +76,7 @@ curl -X POST "https://api.vectorcache.com/v1/cache/query" \
 ## Save Response to File
 
 ```bash
-curl -X POST "https://api.vectorcache.com/v1/cache/query" \
+curl -X POST "https://api.vectorcache.ai/v1/cache/query" \
   -H "Authorization: Bearer $VECTORCACHE_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
@@ -90,7 +90,7 @@ curl -X POST "https://api.vectorcache.com/v1/cache/query" \
 Extract only the response text:
 
 ```bash
-curl -X POST "https://api.vectorcache.com/v1/cache/query" \
+curl -X POST "https://api.vectorcache.ai/v1/cache/query" \
   -H "Authorization: Bearer $VECTORCACHE_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
@@ -102,7 +102,7 @@ curl -X POST "https://api.vectorcache.com/v1/cache/query" \
 Check if it was a cache hit:
 
 ```bash
-curl -X POST "https://api.vectorcache.com/v1/cache/query" \
+curl -X POST "https://api.vectorcache.ai/v1/cache/query" \
   -H "Authorization: Bearer $VECTORCACHE_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
@@ -126,7 +126,7 @@ PROMPTS=(
 
 for prompt in "${PROMPTS[@]}"; do
   echo "Querying: $prompt"
-  curl -s -X POST "https://api.vectorcache.com/v1/cache/query" \
+  curl -s -X POST "https://api.vectorcache.ai/v1/cache/query" \
     -H "Authorization: Bearer $VECTORCACHE_API_KEY" \
     -H "Content-Type: application/json" \
     -d "{
@@ -143,7 +143,7 @@ done
 Show HTTP status code and response:
 
 ```bash
-curl -i -X POST "https://api.vectorcache.com/v1/cache/query" \
+curl -i -X POST "https://api.vectorcache.ai/v1/cache/query" \
   -H "Authorization: Bearer $VECTORCACHE_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
@@ -156,7 +156,7 @@ Only show status code:
 
 ```bash
 curl -s -o /dev/null -w "%{http_code}" \
-  -X POST "https://api.vectorcache.com/v1/cache/query" \
+  -X POST "https://api.vectorcache.ai/v1/cache/query" \
   -H "Authorization: Bearer $VECTORCACHE_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
@@ -177,7 +177,7 @@ RETRY_DELAY=2
 
 for i in $(seq 1 $MAX_RETRIES); do
   response=$(curl -s -w "\n%{http_code}" \
-    -X POST "https://api.vectorcache.com/v1/cache/query" \
+    -X POST "https://api.vectorcache.ai/v1/cache/query" \
     -H "Authorization: Bearer $VECTORCACHE_API_KEY" \
     -H "Content-Type: application/json" \
     -d '{
@@ -215,7 +215,7 @@ THRESHOLDS=(0.70 0.80 0.85 0.90 0.95)
 
 for threshold in "${THRESHOLDS[@]}"; do
   echo "Testing threshold: $threshold"
-  curl -s -X POST "https://api.vectorcache.com/v1/cache/query" \
+  curl -s -X POST "https://api.vectorcache.ai/v1/cache/query" \
     -H "Authorization: Bearer $VECTORCACHE_API_KEY" \
     -H "Content-Type: application/json" \
     -d "{
@@ -277,7 +277,7 @@ done
 
 ```bash
 curl -w "\nTime: %{time_total}s\n" \
-  -X POST "https://api.vectorcache.com/v1/cache/query" \
+  -X POST "https://api.vectorcache.ai/v1/cache/query" \
   -H "Authorization: Bearer $VECTORCACHE_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
@@ -291,7 +291,7 @@ curl -w "\nTime: %{time_total}s\n" \
 Use GNU Parallel to send concurrent requests:
 
 ```bash
-parallel -j 5 "curl -s -X POST 'https://api.vectorcache.com/v1/cache/query' \
+parallel -j 5 "curl -s -X POST 'https://api.vectorcache.ai/v1/cache/query' \
   -H 'Authorization: Bearer $VECTORCACHE_API_KEY' \
   -H 'Content-Type: application/json' \
   -d '{\"prompt\": \"What is AI?\", \"model\": \"gpt-4o\"}' | jq '.cache_hit'" \

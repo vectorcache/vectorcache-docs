@@ -70,6 +70,7 @@ nav:
       - Error Handling: api/errors.md
   - Guides:
       - Best Practices: guides/best-practices.md
+      - Error Handling: guides/error-handling.md
       - Similarity Threshold Tuning: guides/similarity-tuning.md
       - Cost Optimization: guides/cost-optimization.md
       - Security: guides/security.md
